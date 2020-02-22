@@ -1,3 +1,6 @@
+""""This code checks for the time if the presenttime is odd or not odd
+this code is taken from book Head_first_python by paul Barry"""
+
 # importing the dependencies
 from datetime import datetime
 import numpy as np
