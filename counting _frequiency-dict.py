@@ -8,7 +8,20 @@ wordlist = wordstring.split()
 #
 
 # creating a fucntion to convert list wordfreq to dictionary
+freqdict = {}
 def wordlisttofrqdict(wordlist):
     wordfrq = [wordlist.count(w) for w in wordlist]
-    return dict(list(zip(wordlist,wordfrq)))
+    freqdict.update(list(zip(wordlist,wordfrq)))
+    return freqdict
 print(wordlisttofrqdict(wordlist))
+# print(freqdict)
+
+# Sort a dictionary of word-frequency pairs in
+# order of descending frequency.
+
+def sortFreqDict(freqdict):
+    aux = [(freqdict[key], key) for key in freqdict]
+    aux.sort()
+    aux.reverse()
+    return aux
+print(sortFreqDict(freqdict))
